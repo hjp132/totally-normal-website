@@ -1,0 +1,39 @@
+header {
+  display: inline-block;
+}
+
+header a {
+  color: #888888;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+body {
+  background-color: white;
+}
+body h1 {
+  color: black;
+}
+body .mould {
+  background-color: darkslategrey;
+  border-radius: 15px;
+  align-content: center;
+  margin: auto;
+  padding: 20px;
+  color: black;
+}
+body .mould .headr {
+  list-style: none;
+}
+body .mould .userProfile {
+  display: inline-block;
+  background-color: darkgrey;
+}
+body .mould .userProfile img {
+  align-content: center;
+}
+body .mould .tasks {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=style.css.map */
