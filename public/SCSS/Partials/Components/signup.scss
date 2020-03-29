@@ -12,4 +12,10 @@
             }
         }
     }
+    .nav{
+        display: block;
+        .nav-item{
+            display: inline-block;
+        }
+    }
 }
