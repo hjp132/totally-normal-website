@@ -29,15 +29,15 @@ app.use(express.static(path.join(__dirname, '/public')));
 const router = express.Router();
 app.use('/',router);
 
-app.get('*', (req, res) => {
+app.get('', (req, res) => {
     res.render('intro', {
         title: 'Welcome'
     })
 });
 
-app.get('/home', (req, res) => {
-    res.render('home', {
-        title: 'Home'
+app.get('/signup', (req, res) => {
+    res.render('signup', {
+        title: 'Sign Up'
     })
 });
 
