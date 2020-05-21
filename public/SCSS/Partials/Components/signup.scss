@@ -7,10 +7,15 @@
     margin: 0 auto;
     form{
         .form-group{
+            display: none;
             label{
                 font-weight: 500;
             }
+            &.viewed{
+                display: block;
+            }
         }
+        
     }
     .nav{
         display: block;
