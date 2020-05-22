@@ -1,0 +1,20 @@
+<div class="form-group" id="form-5">
+    <label for="phonenumber">Phone Number:</label>
+    <div class="phone-number"></div>
+    <select id="day" name="Day" disabled>
+        <option value="+44">+44</option>
+    </select>
+    <span id="demo"></span>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="9999999999" value="1" class="slider" id="myRange">
+    </div>
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+        output.innerHTML = this.value;
+        }
+    </script>
+</div>

@@ -32,10 +32,7 @@
                 console.log(counter)
                 
             })
-
-
         });
-
     </script>
  
 </head>
@@ -50,6 +47,19 @@
         <form>
             {{>form1to3}}
             {{>dateofbirth}}
+            {{>phonenumber}}
+            <!--
+                I need to look at the following:
+                1. Address input - i could ruin this by randomising
+                 the order of the the forms with each keypress.
+                2. create password - i could ruin this by having a stupid 
+                amount of different requirements
+                3. create account button - i could ruin this by making it
+                 change location on hover
+                3.1 do i include a captcha?!
+                4. rick roll the user somehow
+
+             -->
         </form>
                 <button class="nav-link  back btn" id="button-back">Back</button>
                 <button class="nav-link  next btn" id="button-next">Next</button>
