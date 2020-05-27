@@ -22,7 +22,16 @@ $(document).ready(() => {
             }
         $('#form-' + counter).addClass('viewed')
         console.log(counter)
-        
     })
- 
+
+    $("#firstNameInput").change(() => {
+        console.log("changed")
+        let firstNameStr = $("#firstNameInput").val;
+        if (firstNameStr == "thingy"){
+            alert("very funny sam..");
+        }
+
+    })
+
 });
+
