@@ -28,10 +28,26 @@ $(document).ready(() => {
         console.log("changed")
         let firstNameStr = $("#firstNameInput").val;
         if (firstNameStr == "thingy"){
-            alert("very funny sam..");
         }
 
     })
-
+    // https://codepen.io/diegoleme/pen/surIK
 });
 
+// this doesn't work and you need to find a better way of doing this :) 
+
+// let firstNameInput = document.getElementById("firstNameInput"),
+//     thingy = "thingy";
+
+
+//     function validatePassword(){
+//         if(firstNameInput.value != thingy.value) {
+//           confirm_password.setCustomValidity("Passwords Don't Match");
+//         } else {
+//           confirm_password.setCustomValidity('');
+//         }
+//       }
+      
+//       password.onchange = validatePassword;
+
+// firstNameInput.onchange = validateThingy;
