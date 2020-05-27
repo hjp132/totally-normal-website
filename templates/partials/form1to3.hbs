@@ -1,6 +1,8 @@
-<div class="form-group" id="form-1">
+<div class="form-group" id="form-1" name="also">
     <label for="firstNameInput">First Name:</label></br>
-    <input type="email" class="form-control" id="firstNameInput"  placeholder="Enter First Name">
+    
+    <input   class="form-control" id="firstNameInput"  placeholder="Enter First Name" name="firstName">
+
     <a class="auth" id="auth-1">X</a>
     <small class="form-text">Please don't write thingy</small>
 </div>
@@ -16,3 +18,5 @@
     <a class="auth" id="auth-3">X</a>
     <small id="emailHelp" class="form-text">We'll share your email with anyone.</small>
 </div>
+
+{{!-- CheckPassword(document.also.firstName) --}}

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 
 // this doesn't work and you need to find a better way of doing this :) 
 
@@ -17,3 +18,19 @@
 
 // firstNameInput.onchange = validateThingy;
 
+=======
+function CheckPassword(inputtxt) 
+{ 
+var passw= "Thingy";
+if(inputtxt.value.match(passw)) 
+{ 
+console.log('Correct, try another...')
+return true;
+}
+else
+{ 
+console.log('Wrong...!')
+return false;
+}
+}
+>>>>>>> Stashed changes
