@@ -32,6 +32,8 @@ const inputKeys = {
     C: "C"
 }
 
+let i = -1;
+
 function change(){
     var elem = document.getElementById("email-1");
     if (elem.value=="Before") elem.value = "After";
