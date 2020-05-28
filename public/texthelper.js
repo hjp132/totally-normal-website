@@ -45,14 +45,11 @@ function btnLetterSwitch(clicked_id){
         i = 0; 
     }
     elem.value=letters[i]
+    let emailBuilt = elem.value;
+    $('.email-built').append(emailBuilt)
 }
  
-function parse(str) {
-    var args = [].slice.call(arguments, 1),
-        i = 0;
 
-    return str.replace(/%s/g, () => args[i++]);
-}
 
 let enumber = 3;
 function moreLetters(e){
@@ -65,5 +62,3 @@ function moreLetters(e){
 function lessLetters(e){
     $('.btn.letterbtn')[0].remove();
 }
-
-
