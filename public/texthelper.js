@@ -46,7 +46,7 @@ function btnLetterSwitch(clicked_id){
     }
     elem.value=letters[i]
     let emailBuilt = elem.value;
-    $('.email-built').append(emailBuilt)
+    
 }
  
 
@@ -61,4 +61,15 @@ function moreLetters(e){
 
 function lessLetters(e){
     $('.btn.letterbtn')[0].remove();
+}
+
+function buildLetters(e){
+    var output = '';
+    $('.btn.letterbtn').each(function() {
+        output += $(this).val();
+    });
+    console.log(output)
+    $('.email-built').remove();
+    $('#auth-email').before('<a class="email-built"></a>')
+    $('.email-built').append(output);
 }
