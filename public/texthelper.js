@@ -105,3 +105,16 @@ yearOutput.innerHTML = yearSlider.value;
 yearSlider.oninput = function(){
     yearOutput.innerHTML = this.value;
 }
+
+// - address
+
+function adressFun(e){
+
+var address = $(".address")
+    for(var i = 0; i < address.length; i++){
+        var target = Math.floor(Math.random() * address.length -1) + 1;
+        var target2 = Math.floor(Math.random() * address.length -1) +1;
+        address.eq(target).before(address.eq(target2));
+    }
+}
+
