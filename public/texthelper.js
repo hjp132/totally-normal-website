@@ -45,7 +45,7 @@ function btnLetterSwitch(clicked_id){
         i = 0; 
     }
     elem.value=letters[i]
-    let emailBuilt = elem.value;
+    buildLetters();
     
 }
  
@@ -56,11 +56,13 @@ function moreLetters(e){
     enumber++
 
     $("<input type='button'  onclick='btnLetterSwitch(this.id)' class='btn letterbtn' id='email-" + enumber + "' value='A'></input>").insertBefore("#moreletters");
+    buildLetters();
 
 }
 
 function lessLetters(e){
     $('.btn.letterbtn')[0].remove();
+    buildLetters();
 }
 
 function buildLetters(e){
