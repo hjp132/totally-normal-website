@@ -76,10 +76,32 @@ function buildLetters(e){
     $('.email-built').append(output);
 }
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
 
-slider.oninput = function() {
-    output.innerHTML = this.value;
+
+// phone number slider
+var phslider = document.getElementById("myRange");
+var phoutput = document.getElementById("demo");
+phoutput.innerHTML = phslider.value;
+
+phslider.oninput = function() {
+    phoutput.innerHTML = this.value;
+}
+
+//dob sldiers
+// - DDD
+var dddSlider = document.getElementById("dayRange");
+var dddOutput = document.getElementById("day");
+dddOutput.innerHTML = dddSlider.value;
+
+dddSlider.oninput = function(){
+    dddOutput.innerHTML = this.value;
+}
+
+// - YYYY
+var yearSlider = document.getElementById("yearRange");
+var yearOutput = document.getElementById("year");
+yearOutput.innerHTML = yearSlider.value;
+
+yearSlider.oninput = function(){
+    yearOutput.innerHTML = this.value;
 }
