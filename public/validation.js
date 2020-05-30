@@ -12,15 +12,20 @@ function fnameValidation(textID){
    
     let elem = document.getElementById(textID)
     let test = $(elem).siblings('.auth')
-    // if (elem.value == "thingy"){
-    //     test.removeClass("green")
-    //     test.addClass("red")
-    //     location.replace("https://youtu.be/My0lzMuNcHI")
-    // }
+
+    if ($(textID) == null){
+        $("#button-next").removeClass("visible")
+        test.remove("green");
+    }
+    else {
         console.log("safe")
-        test.remove("red");
+        
         test.addClass("green")
-    // }  
+        $("#button-next").addClass("visible")
+    }
+
+    
+       
 }
 
 
