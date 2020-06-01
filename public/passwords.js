@@ -1,11 +1,14 @@
-var myInput = document.getElementById("psw");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
-var numerals = document.getElementById("numerals");
-var specchar = document.getElementById("specChar");
-var timeinHour = document.getElementById("timeinhour");
+let myInput = document.getElementById("psw");
+let letter = document.getElementById("letter");
+let capital = document.getElementById("capital");
+let number = document.getElementById("number");
+let length = document.getElementById("length");
+let numerals = document.getElementById("numerals");
+let specchar = document.getElementById("specChar");
+let timeinHour = document.getElementById("timeinhour");
+let hexCode = document.getElementById("hexCode");
+let brazilCode = document.getElementById("brazilCode");
+
 
 // When the user clicks on the password field, show the message box
 myInput.onfocus = function() {
@@ -58,26 +61,71 @@ myInput.onkeyup = function() {
     length.classList.add("invalid");
   }
 
+
   if($(".valid").length >= 4){
-    $('#numerals').css("display", "block")
-  }
-  if($(".valid").length >= 5){
     $('#specChar').css("display", "block")
   }
-  if($(".valid").length >= 6){
-    $('#timeinHour').css("display", "block")
+  if($(".valid").length >= 5){
+    $('#numerals').css("display", "block")
   }
+  if($(".valid").length >= 6){
+    $('#hexCode').css("display", "block")
+  }
+  if($(".valid").length >= 7){
+    $('#brazilCode').css("display", "block")
+  }
+
 
   //Roman Numerals
-  let Numerals = /^[MDCLXVI]+$/;
+  //regexr.com/3e95j
+  let Numerals = /(?=[MDCLXVI])M*(C[MD]|D?C*)(X[CL]|L?X*)(I[XV]|V?I*)/g;
   if(myInput.value.match(Numerals)){
-
+    numerals.classList.remove("invalid");
+    numerals.classList.add("valid");
+  } else {
+    numerals.classList.remove("valid");
+    numerals.classList.add("invalid");
   }
 
+  let SpecChar = /[^A-z\s\d][\\\^]?/g
+  if(myInput.value.match(SpecChar)) {
+    specChar.classList.remove("invalid");
+    specChar.classList.add("valid");
+  } else {
+    specChar.classList.remove("valid");
+    specChar.classList.add("invalid");
+  }
 
-  
+  let HexCode = /#?([\da-fA-F]{2})([\da-fA-F]{2})([\da-fA-F]{2})/
+  if(myInput.value.match(HexCode)){
+    hexCode.classList.remove("invalid");
+    hexCode.classList.add("valid");
+  } else {
+    hexCode.classList.remove("valid");
+    hexCode.classList.add("invalid");
+  }
+
+  let brazilcode = /(A[CLPM]|BA|CE|DF|GO|ES|M[ATSG]|P[ABREI]|R[JNSOR]|S[PCE]|TO)/gi
+  if(myInput.value.match(brazilcode)){
+    brazilCode.classList.remove("invalid");
+    brazilCode.classList.add("valid");
+  } else {
+    brazilCode.classList.remove("valid");
+    brazilCode.classList.add("invalid");
+  }
 }
 
+function isPasswordMatch() {
+  let password = $("#psw").val();
+  let confirmPassword = $("#retypepsw").val();
 
+  if (password != confirmPassword) console.log("umatched!");
+  else console.log("matched!");
+}
+
+//hP1davee@iv/#FFFFFFAC
+$(document).ready(function () {
+  $("#retypepsw").keyup(isPasswordMatch);
+});
 
 
