@@ -1,0 +1,77 @@
+.dark-mode {
+  background-color: #303030;
+  color: white;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1.title {
+  font-size: 82px;
+}
+
+.spacing {
+  margin-right: 20px;
+}
+
+.btn {
+  border-radius: 10px;
+  border: 1px solid white;
+  color: white;
+}
+.btn.single {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.btn.next {
+  max-width: 100px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #303030;
+  display: inline-block;
+  padding: 20px;
+  vertical-align: middle;
+  width: 100%;
+  color: white;
+  margin-bottom: 50px;
+}
+header .nav-logo a {
+  color: white;
+}
+header .nav-logo {
+  float: left;
+  padding: 8px 16px;
+  display: block;
+}
+header .nav-section {
+  float: right;
+  color: white;
+}
+header .nav-section .nav .nav-item .nav-link {
+  color: white;
+}
+
+.signup-area {
+  background-color: #525252;
+  padding: 20px;
+  border-radius: 14px;
+  max-width: 601px;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+.signup-area form .form-group label {
+  font-weight: 500;
+}
+.signup-area .nav {
+  display: block;
+}
+.signup-area .nav .nav-item {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=index.css.map */
