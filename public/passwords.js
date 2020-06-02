@@ -123,19 +123,18 @@ myInput.onkeyup = function() {
 // confirm password
 
 function isPasswordMatch() {
-  // let password = $("#psw").val();
-  // let confirmPassword = $("#retypepsw").val();
+  let password = $("#psw").val();
+  let confirmPassword = $("#retypepsw").val();
 
-  // if (password != confirmPassword) {
-  //   hideNextBtn();
-  // }else {
+  if (password != confirmPassword) {
+    hideNextBtn();
+  }else {
     showNextBtn();
-  // } 
+  } 
 }
 
 //hP1davee@iv/#FFFFFFAC
 $(document).ready(function () {
   $("#retypepsw").keyup(isPasswordMatch);
 });
-
 

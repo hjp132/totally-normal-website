@@ -56,12 +56,10 @@ function showNextBtn(){
     $('#button-next').addClass("visible")
 }
 function nameValidation(textID){
-   
-    console.log(textID)
-    let inputted = document.getElementById(textID).value
+    let inputted = $("#" + textID).val()
     let test = $("#auth-" + counter)
 
-    if (inputted == null){
+    if (inputted == ""){
         $("#button-next").removeClass("visible")
         test.removeClass("green");
         console.log("bad" + counter)
