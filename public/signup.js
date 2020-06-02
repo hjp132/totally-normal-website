@@ -10,7 +10,7 @@ $(document).ready(() => {
         if (counter > 1 ){
         $('#button-back').removeClass('hidden');
     }
-        console.log(counter)
+    
         $('#form-' + counter).addClass('viewed')
         
     })
@@ -22,11 +22,11 @@ $(document).ready(() => {
                 $('#button-back').addClass('hidden');
             }
         $('#form-' + counter).addClass('viewed')
-        console.log(counter)
+  
     })
 
     $("#firstNameInput").change(() => {
-        console.log("changed")
+
         let firstNameStr = $("#firstNameInput").val;
         if (firstNameStr == "thingy"){
         }
@@ -62,9 +62,9 @@ function nameValidation(textID){
     if (inputted == ""){
         $("#button-next").removeClass("visible")
         test.removeClass("green");
-        console.log("bad" + counter)
+
     }else {
-        console.log("safe" + counter)
+
         
         test.addClass("green")
         $("#button-next").addClass("visible")
@@ -76,11 +76,9 @@ function emailValidation(){
     let validation = /^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/gm
     if (email.match(validation)){
         showNextBtn();
-        console.log("good email")
     }
     else {
         hideNextBtn();
-        console.log("bad email")
     }
 }
 
