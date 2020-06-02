@@ -57,33 +57,33 @@ function showNextBtn(){
 }
 function nameValidation(textID){
    
-    // console.log(textID)
-    // let inputted = document.getElementById(textID).value
-    // let test = $("#auth-" + counter)
+    console.log(textID)
+    let inputted = document.getElementById(textID).value
+    let test = $("#auth-" + counter)
 
-    // if (inputted == null){
-    //     $("#button-next").removeClass("visible")
-    //     test.removeClass("green");
-    //     console.log("bad" + counter)
-    // }else {
-    //     console.log("safe" + counter)
+    if (inputted == null){
+        $("#button-next").removeClass("visible")
+        test.removeClass("green");
+        console.log("bad" + counter)
+    }else {
+        console.log("safe" + counter)
         
-        // test.addClass("green")
+        test.addClass("green")
         $("#button-next").addClass("visible")
-    // }   
+    }   
 }
 
 function emailValidation(){
     let email = $('#email-built').val()
     let validation = /^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/gm
-    // if (email.match(validation)){
+    if (email.match(validation)){
         showNextBtn();
-    //     console.log("good email")
-    // }
-    // else {
-        // hideNextBtn();
-        // console.log("bad email")
-    // }
+        console.log("good email")
+    }
+    else {
+        hideNextBtn();
+        console.log("bad email")
+    }
 }
 
 function dobValidation(){
@@ -91,14 +91,16 @@ function dobValidation(){
 }
 
 function phoneValidation(thisid){
-    // let validation = /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/gm
-    // let phone = $("#" + thisid).val()
-    // if (phone.match(validation)){
+    let validation = /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/gm
+    let phone = $("#" + thisid).val()
+    if (phone.match(validation)){
         showNextBtn();
-    // }
-    // else {
-    //     hideNextBtn();
-    // }
+    }
+    else {
+        hideNextBtn();
+    }
 }
 
 //password validation is in password.js
+
+
