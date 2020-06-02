@@ -74,6 +74,11 @@ myInput.onkeyup = function() {
   if($(".valid").length >= 7){
     $('#brazilCode').css("display", "block")
   }
+  if($(".valid").length >= 8){
+    showNextBtn();
+  } else {
+    hideNextBtn
+  }
 
 
   //Roman Numerals
@@ -115,12 +120,17 @@ myInput.onkeyup = function() {
   }
 }
 
-function isPasswordMatch() {
-  let password = $("#psw").val();
-  let confirmPassword = $("#retypepsw").val();
+// confirm password
 
-  if (password != confirmPassword) console.log("umatched!");
-  else console.log("matched!");
+function isPasswordMatch() {
+  // let password = $("#psw").val();
+  // let confirmPassword = $("#retypepsw").val();
+
+  // if (password != confirmPassword) {
+  //   hideNextBtn();
+  // }else {
+    showNextBtn();
+  // } 
 }
 
 //hP1davee@iv/#FFFFFFAC
