@@ -1,3 +1,11 @@
+let stylesheetv1 = document.createElement("stylesheetv1");
+stylesheetv1.rel = "stylesheet"
+stylesheetv1.type = "text/css"
+stylesheetv1.href = "CSS/style.css"
+document.getElementsByTagName('HEAD')[0].appendChild(stylesheetv1);  
+
+
+
 let counter = 1;
 $(document).ready(() => {
     counter = 1;
