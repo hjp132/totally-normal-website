@@ -76,8 +76,10 @@ myInput.onkeyup = function() {
   }
   if($(".valid").length >= 8){
     showNextBtn();
+    $('#auth-6').addClass("green")
   } else {
-    hideNextBtn
+    hideNextBtn();
+    $('#auth-6').removeClass("green")
   }
 
 
@@ -128,8 +130,10 @@ function isPasswordMatch() {
 
   if (password != confirmPassword) {
     hideNextBtn();
+    $('#auth-7').removeClass("green")
   }else {
     showNextBtn();
+    $('#auth-7').addClass("green")
   } 
 }
 

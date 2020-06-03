@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 const router = express.Router();
 app.use('/',router);
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     res.render('intro', {
         title: 'Welcome'
     })
@@ -39,6 +39,7 @@ app.get('/signup', (req, res) => {
         title: 'Sign Up'
     })
 });
+
 
 
 

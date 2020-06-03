@@ -72,8 +72,6 @@ function nameValidation(textID){
         test.removeClass("green");
 
     }else {
-
-        
         test.addClass("green")
         $("#button-next").addClass("visible")
     }   
@@ -84,14 +82,18 @@ function emailValidation(){
     let validation = /^(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])$/gm
     if (email.match(validation)){
         showNextBtn();
+        $('#auth-3').addClass("green")
     }
     else {
         hideNextBtn();
+        $('#auth-3').removeClass("green")
     }
 }
 
 function dobValidation(){
     showNextBtn();
+    $('#auth-4').addClass("green")
+
 }
 
 function phoneValidation(thisid){
@@ -99,9 +101,11 @@ function phoneValidation(thisid){
     let phone = $("#" + thisid).val()
     if (phone.match(validation)){
         showNextBtn();
+        $('#auth-5').addClass("green")
     }
     else {
         hideNextBtn();
+        $('#auth-5').removeClass("green")
     }
 }
 
